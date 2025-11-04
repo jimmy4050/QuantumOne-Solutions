@@ -27,8 +27,8 @@ const ContactPage: React.FC = () => {
       {/* Page Header */}
       <section className="bg-primary text-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold">Get in Touch</h1>
-          <p className="text-lg mt-2 max-w-3xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl font-bold">Get in Touch</h1>
+          <p className="text-base mt-2 max-w-3xl mx-auto">
             We'd love to hear from you. Reach out to us for inquiries, support, or to discuss your next project.
           </p>
         </div>
@@ -40,7 +40,7 @@ const ContactPage: React.FC = () => {
           <div className="grid md:grid-cols-12 gap-8">
             {/* Contact Info */}
             <div className="md:col-span-5 bg-white p-8 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold text-neutral-900 mb-6">Contact Information</h2>
+              <h2 className="text-xl font-bold text-neutral-900 mb-6">Contact Information</h2>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <MapPin className="w-6 h-6 text-primary mr-4 mt-1" />
@@ -68,7 +68,7 @@ const ContactPage: React.FC = () => {
 
             {/* Contact Form */}
             <div className="md:col-span-7 bg-white p-8 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold text-neutral-900 mb-6">Send us a Message</h2>
+              <h2 className="text-xl font-bold text-neutral-900 mb-6">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-neutral-700">Full Name</label>

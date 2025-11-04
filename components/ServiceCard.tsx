@@ -16,7 +16,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, isDetailed = false }
       <div className="flex items-center justify-center bg-secondary/10 rounded-full w-16 h-16 mb-4">
         <Icon className="w-8 h-8 text-primary" />
       </div>
-      <h3 className="text-xl font-bold text-neutral-900 mb-2">{service.title}</h3>
+      <h3 className="text-lg font-bold text-neutral-900 mb-2">{service.title}</h3>
       <p className="text-neutral-500 flex-grow">{isDetailed ? service.details : service.description}</p>
       {!isDetailed && (
         <Link to="/services" className="text-primary font-semibold mt-4 inline-flex items-center group">

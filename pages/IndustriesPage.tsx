@@ -10,8 +10,8 @@ const IndustriesPage: React.FC = () => {
       {/* Page Header */}
       <section className="bg-primary text-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold">Industries We Serve</h1>
-          <p className="text-lg mt-2 max-w-3xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl font-bold">Industries We Serve</h1>
+          <p className="text-base mt-2 max-w-3xl mx-auto">
             We provide tailored IT solutions for a diverse range of sectors, understanding the unique challenges of each industry.
           </p>
         </div>
@@ -28,7 +28,7 @@ const IndustriesPage: React.FC = () => {
                   <div className="flex items-center justify-center bg-secondary/10 rounded-full w-20 h-20 mb-6 mx-auto">
                     <Icon className="w-10 h-10 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold text-neutral-900 mb-3">{industry.name}</h3>
+                  <h3 className="text-xl font-bold text-neutral-900 mb-3">{industry.name}</h3>
                   <p className="text-neutral-500">{industry.description}</p>
                 </div>
               );

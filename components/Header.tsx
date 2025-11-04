@@ -41,7 +41,7 @@ const Header: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} text-lg`}
+                className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} text-base`}
               >
                 {link.name}
               </NavLink>

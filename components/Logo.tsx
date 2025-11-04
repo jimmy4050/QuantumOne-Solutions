@@ -23,7 +23,7 @@ const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
         />
         <circle cx="20" cy="20" r="4" className="fill-primary" />
       </svg>
-      <span className="text-xl sm:text-2xl font-bold">
+      <span className="text-lg sm:text-xl font-bold">
         <span className="text-primary">QuantumOne</span>
         <span className="text-neutral-500 font-light"> Solutions</span>
       </span>

@@ -10,6 +10,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
 import ScrollToTop from './components/ScrollToTop';
 import CookieConsentBanner from './components/CookieConsentBanner';
+import BackToTopButton from './components/BackToTopButton';
 
 const App: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         </main>
         <Footer />
         <CookieConsentBanner />
+        <BackToTopButton />
       </div>
     </HashRouter>
   );
