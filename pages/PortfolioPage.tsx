@@ -25,7 +25,7 @@ const PortfolioPage: React.FC = () => {
       {/* Page Header */}
       <section className="bg-primary text-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-2xl sm:text-3xl font-bold">Our Projects</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold font-heading">Our Projects</h1>
           <p className="text-base mt-2 max-w-3xl mx-auto">
             Discover some of our successful implementations and see how we've helped businesses like yours.
           </p>
@@ -46,7 +46,7 @@ const PortfolioPage: React.FC = () => {
                     key={category}
                     onClick={() => setActiveCategory(category)}
                     aria-pressed={activeCategory === category}
-                    className={`px-5 py-2 rounded-full font-semibold text-sm md:text-base transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                    className={`px-5 py-2 rounded-full font-semibold text-sm md:text-base transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 font-heading ${
                       activeCategory === category
                         ? 'bg-primary text-white shadow-md'
                         : 'bg-white text-neutral-700 hover:bg-secondary/10 border border-neutral-300'

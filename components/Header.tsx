@@ -21,7 +21,7 @@ const Header: React.FC = () => {
             <NavLink
               key={link.name}
               to={link.path}
-              className={({ isActive }) => isActive ? activeLinkClass : inactiveLinkClass}
+              className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} font-heading font-medium`}
             >
               {link.name}
             </NavLink>
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} text-base`}
+                className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} text-base font-heading font-medium`}
               >
                 {link.name}
               </NavLink>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import useTitle from '../hooks/useTitle';
 import { COMPANY_VALUES, TEAM_DATA } from '../constants';
@@ -10,7 +9,7 @@ const AboutPage: React.FC = () => {
       {/* Page Header */}
       <section className="bg-primary text-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-2xl sm:text-3xl font-bold">About QuantumOne Solutions</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold font-heading">About QuantumOne Solutions</h1>
           <p className="text-base mt-2">Your Partner in Digital Transformation</p>
         </div>
       </section>
@@ -19,7 +18,7 @@ const AboutPage: React.FC = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4">Our Journey</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4 font-heading">Our Journey</h2>
             <p className="text-neutral-500 mb-4">
               Founded in Surat, Gujarat, QuantumOne Solutions was born from a vision to provide businesses with technology solutions that are not just powerful, but also practical and reliable. With years of collective experience, our team is committed to innovation and excellence, helping our clients navigate the complexities of the digital world and achieve sustainable growth.
             </p>
@@ -38,11 +37,11 @@ const AboutPage: React.FC = () => {
       <section className="py-16 md:py-20 bg-neutral-100">
         <div className="container mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 text-center md:text-left">
           <div>
-            <h3 className="text-lg sm:text-xl font-bold text-primary mb-3">Our Vision</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-primary mb-3 font-heading">Our Vision</h3>
             <p className="text-neutral-500">To be the most trusted and innovative IT solutions partner for businesses in Gujarat and beyond, empowering them to thrive in the digital era.</p>
           </div>
           <div>
-            <h3 className="text-lg sm:text-xl font-bold text-primary mb-3">Our Mission</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-primary mb-3 font-heading">Our Mission</h3>
             <p className="text-neutral-500">To deliver reliable, scalable, and cost-effective IT infrastructure, software, and cloud solutions, backed by exceptional customer service and technical expertise.</p>
           </div>
         </div>
@@ -51,14 +50,14 @@ const AboutPage: React.FC = () => {
       {/* Core Values */}
        <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-12">Our Core Values</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-12 font-heading">Our Core Values</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {COMPANY_VALUES.map((value) => (
               <div key={value.title} className="p-6">
                 <div className="flex items-center justify-center bg-primary/10 rounded-full w-20 h-20 mb-6 mx-auto">
                     <value.icon className="w-10 h-10 text-primary"/>
                 </div>
-                <h3 className="text-lg font-bold text-neutral-900 mb-2">{value.title}</h3>
+                <h3 className="text-lg font-bold text-neutral-900 mb-2 font-heading">{value.title}</h3>
                 <p className="text-neutral-500">{value.description}</p>
               </div>
             ))}
@@ -69,12 +68,12 @@ const AboutPage: React.FC = () => {
       {/* Team Section */}
       <section className="py-16 md:py-20 bg-neutral-100">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-12">Meet Our Leadership</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-12 font-heading">Meet Our Leadership</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {TEAM_DATA.map((member) => (
               <div key={member.name} className="bg-white p-6 rounded-lg shadow-md">
                 <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" loading="lazy" />
-                <h3 className="text-lg font-bold text-neutral-900">{member.name}</h3>
+                <h3 className="text-lg font-bold text-neutral-900 font-heading">{member.name}</h3>
                 <p className="text-secondary">{member.title}</p>
               </div>
             ))}

@@ -9,13 +9,13 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <h3 className="text-lg font-bold mb-4">QuantumOne Solutions</h3>
+            <h3 className="text-lg font-bold mb-4 font-heading">QuantumOne Solutions</h3>
             <p className="text-neutral-300">
               Your trusted IT infrastructure and software partner for end-to-end enterprise technology solutions.
             </p>
           </div>
           <div>
-            <h4 className="text-base font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-base font-semibold mb-4 font-heading">Quick Links</h4>
             <ul className="space-y-2">
               {NAV_LINKS.map((link) => (
                 <li key={link.name}>
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-base font-semibold mb-4">Our Services</h4>
+            <h4 className="text-base font-semibold mb-4 font-heading">Our Services</h4>
             <ul className="space-y-2">
               <li><Link to="/services" className="text-neutral-300 hover:text-secondary transition-colors">Server Hardware</Link></li>
               <li><Link to="/services" className="text-neutral-300 hover:text-secondary transition-colors">Cloud Computing</Link></li>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-base font-semibold mb-4">Contact Us</h4>
+            <h4 className="text-base font-semibold mb-4 font-heading">Contact Us</h4>
             <ul className="space-y-3 text-neutral-300">
               <li className="flex items-start">
                 <MapPin size={20} className="mr-3 mt-1 flex-shrink-0" />
