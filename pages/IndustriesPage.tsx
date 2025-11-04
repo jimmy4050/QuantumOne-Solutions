@@ -8,9 +8,9 @@ const IndustriesPage: React.FC = () => {
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-primary text-white py-16">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl font-bold">Industries We Serve</h1>
+      <section className="bg-primary text-white py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold">Industries We Serve</h1>
           <p className="text-lg mt-2 max-w-3xl mx-auto">
             We provide tailored IT solutions for a diverse range of sectors, understanding the unique challenges of each industry.
           </p>
@@ -18,8 +18,8 @@ const IndustriesPage: React.FC = () => {
       </section>
 
       {/* Industries Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {INDUSTRIES_DATA.map((industry) => {
               const Icon = industry.icon;

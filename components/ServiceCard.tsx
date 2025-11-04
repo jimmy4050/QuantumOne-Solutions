@@ -12,7 +12,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, isDetailed = false }) => {
   const Icon = service.icon;
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+    <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
       <div className="flex items-center justify-center bg-secondary/10 rounded-full w-16 h-16 mb-4">
         <Icon className="w-8 h-8 text-primary" />
       </div>

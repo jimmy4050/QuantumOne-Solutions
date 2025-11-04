@@ -1,4 +1,3 @@
-
 import { LucideIcon } from 'lucide-react';
 
 export interface Service {
@@ -6,6 +5,7 @@ export interface Service {
   title: string;
   description: string;
   details: string;
+  category: string;
 }
 
 export interface Industry {

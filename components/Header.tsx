@@ -1,8 +1,8 @@
-
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
+import Logo from './Logo';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +12,9 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-primary">
-          QuantumOne Solutions
+      <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+        <Link to="/" aria-label="QuantumOne Solutions Home Page">
+          <Logo />
         </Link>
         <nav className="hidden md:flex space-x-8">
           {NAV_LINKS.map((link) => (
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
           ))}
         </nav>
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-primary focus:outline-none">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-primary focus:outline-none" aria-label="Toggle mobile menu">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>

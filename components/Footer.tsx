@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
@@ -7,10 +6,10 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-neutral-900 text-white">
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold mb-4">P Infotech Solutions</h3>
+            <h3 className="text-xl font-bold mb-4">QuantumOne Solutions</h3>
             <p className="text-neutral-300">
               Your trusted IT infrastructure and software partner for end-to-end enterprise technology solutions.
             </p>
@@ -49,14 +48,14 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-3 flex-shrink-0" />
-                <a href="mailto:info@pinfotech.com" className="hover:text-secondary transition-colors">info@pinfotech.com</a>
+                <a href="mailto:info@quantumone.com" className="hover:text-secondary transition-colors">info@quantumone.com</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div className="bg-black text-center py-4">
-        <p className="text-neutral-500 text-sm">&copy; {new Date().getFullYear()} P Infotech Solutions. All Rights Reserved.</p>
+        <p className="text-neutral-500 text-sm">&copy; {new Date().getFullYear()} QuantumOne Solutions. All Rights Reserved.</p>
       </div>
     </footer>
   );

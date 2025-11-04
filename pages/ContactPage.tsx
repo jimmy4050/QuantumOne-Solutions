@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import useTitle from '../hooks/useTitle';
 import { MapPin, Phone, Mail } from 'lucide-react';
@@ -26,9 +25,9 @@ const ContactPage: React.FC = () => {
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-primary text-white py-16">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl font-bold">Get in Touch</h1>
+      <section className="bg-primary text-white py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold">Get in Touch</h1>
           <p className="text-lg mt-2 max-w-3xl mx-auto">
             We'd love to hear from you. Reach out to us for inquiries, support, or to discuss your next project.
           </p>
@@ -36,8 +35,8 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-12 gap-8">
             {/* Contact Info */}
             <div className="md:col-span-5 bg-white p-8 rounded-lg shadow-lg">
@@ -61,7 +60,7 @@ const ContactPage: React.FC = () => {
                   <Mail className="w-6 h-6 text-primary mr-4 mt-1" />
                   <div>
                     <h3 className="font-semibold text-neutral-800">Email</h3>
-                    <a href="mailto:info@pinfotech.com" className="text-neutral-500 hover:text-primary">info@pinfotech.com</a>
+                    <a href="mailto:info@quantumone.com" className="text-neutral-500 hover:text-primary">info@quantumone.com</a>
                   </div>
                 </div>
               </div>
@@ -101,7 +100,7 @@ const ContactPage: React.FC = () => {
 
       {/* Map Section */}
       <section>
-        <div className="w-full h-96">
+        <div className="w-full h-64 md:h-96">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238132.3924771578!2d72.6840702717088!3d21.1591204488339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1678886568163!5m2!1sen!2sin"
             width="100%"

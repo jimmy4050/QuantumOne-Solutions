@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -9,10 +8,13 @@ import ServicesPage from './pages/ServicesPage';
 import IndustriesPage from './pages/IndustriesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
+import ScrollToTop from './components/ScrollToTop';
+import CookieConsentBanner from './components/CookieConsentBanner';
 
 const App: React.FC = () => {
   return (
     <HashRouter>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-neutral-100 text-neutral-700 font-sans">
         <Header />
         <main className="flex-grow">
@@ -26,6 +28,7 @@ const App: React.FC = () => {
           </Routes>
         </main>
         <Footer />
+        <CookieConsentBanner />
       </div>
     </HashRouter>
   );

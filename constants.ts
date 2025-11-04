@@ -1,4 +1,3 @@
-
 import { Server, Cloud, Code, Stethoscope, FlaskConical, Network, Cable, Building, School, Factory, Store, User, Users, HeartHandshake } from 'lucide-react';
 import { Service, Industry, Project, TeamMember } from './types';
 
@@ -11,49 +10,57 @@ export const NAV_LINKS = [
   { name: 'Contact Us', path: '/contact' },
 ];
 
+export const SERVICE_CATEGORIES = ['All', 'Infrastructure', 'Software', 'Cloud'];
+
 export const SERVICES_DATA: Service[] = [
   {
     icon: Server,
     title: 'Server Hardware Solutions',
     description: 'Enterprise servers, storage, and virtualization solutions.',
-    details: 'We provide end-to-end server hardware solutions, including supply, professional installation, and ongoing maintenance of enterprise-grade servers, storage arrays, and virtualization platforms to ensure your IT backbone is robust and reliable.'
+    details: 'We provide end-to-end server hardware solutions, including supply, professional installation, and ongoing maintenance of enterprise-grade servers, storage arrays, and virtualization platforms to ensure your IT backbone is robust and reliable.',
+    category: 'Infrastructure',
   },
   {
     icon: Cloud,
     title: 'Cloud Computing',
     description: 'Cloud migration, data backup, and hybrid solutions.',
-    details: 'Leverage the power of the cloud with our expert services. We specialize in seamless cloud migration, secure data backup strategies, hybrid cloud implementations, and deployment on leading platforms like Microsoft Azure and AWS.'
+    details: 'Leverage the power of the cloud with our expert services. We specialize in seamless cloud migration, secure data backup strategies, hybrid cloud implementations, and deployment on leading platforms like Microsoft Azure and AWS.',
+    category: 'Cloud',
   },
-
   {
     icon: Code,
     title: 'Software Development',
     description: 'Custom web applications, mobile apps, and automation.',
-    details: 'Our development team builds custom web and mobile applications tailored to your unique business needs. We also create powerful automation tools to streamline your workflows, increase efficiency, and drive growth.'
+    details: 'Our development team builds custom web and mobile applications tailored to your unique business needs. We also create powerful automation tools to streamline your workflows, increase efficiency, and drive growth.',
+    category: 'Software',
   },
   {
     icon: Stethoscope,
     title: 'HIMS',
     description: 'Comprehensive Hospital Information Management System.',
-    details: 'Our HIMS is a comprehensive hospital management software designed to digitize and manage all aspects of hospital operations, including OPD, IPD, billing, pharmacy, inventory, and laboratory modules for a paperless environment.'
+    details: 'Our HIMS is a comprehensive hospital management software designed to digitize and manage all aspects of hospital operations, including OPD, IPD, billing, pharmacy, inventory, and laboratory modules for a paperless environment.',
+    category: 'Software',
   },
   {
     icon: FlaskConical,
     title: 'LIMS',
     description: 'Laboratory Information Management System.',
-    details: 'Streamline your laboratory with our LIMS solution. It offers complete workflow automation, featuring a robust test master, dynamic reference ranges, automated reporting, and seamless data export capabilities for enhanced accuracy.'
+    details: 'Streamline your laboratory with our LIMS solution. It offers complete workflow automation, featuring a robust test master, dynamic reference ranges, automated reporting, and seamless data export capabilities for enhanced accuracy.',
+    category: 'Software',
   },
   {
     icon: Network,
     title: 'Networking & Security',
     description: 'Network design, firewall configuration, and data protection.',
-    details: 'Secure and optimize your network with our comprehensive services. We offer expert network design, firewall and VLAN configuration, robust Wi-Fi deployment, and advanced data protection strategies to safeguard your digital assets.'
+    details: 'Secure and optimize your network with our comprehensive services. We offer expert network design, firewall and VLAN configuration, robust Wi-Fi deployment, and advanced data protection strategies to safeguard your digital assets.',
+    category: 'Infrastructure',
   },
    {
     icon: Cable,
     title: 'Rack Dressing & Cabling',
     description: 'Professional cable management and rack layout services.',
-    details: 'We provide professional rack dressing and structured cabling services to organize your data center. Our services include meticulous cable management, logical rack layout design, clear labeling, and thorough documentation for easy maintenance.'
+    details: 'We provide professional rack dressing and structured cabling services to organize your data center. Our services include meticulous cable management, logical rack layout design, clear labeling, and thorough documentation for easy maintenance.',
+    category: 'Infrastructure',
   }
 ];
 
@@ -84,6 +91,8 @@ export const INDUSTRIES_DATA: Industry[] = [
     description: 'Offering point-of-sale networking, inventory management software, and secure data backup for retail businesses.'
   }
 ];
+
+export const PROJECT_CATEGORIES = ['All', 'Healthcare', 'Corporate', 'Manufacturing'];
 
 export const PROJECTS_DATA: Project[] = [
   {
@@ -147,4 +156,3 @@ export const COMPANY_VALUES = [
         description: 'We stay at the forefront of technology to provide innovative solutions that solve real-world business challenges and drive growth.'
     }
 ];
-
