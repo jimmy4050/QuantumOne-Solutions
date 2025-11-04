@@ -1,3 +1,4 @@
+
 import React from 'react';
 import useTitle from '../hooks/useTitle';
 import { COMPANY_VALUES, TEAM_DATA } from '../constants';
@@ -27,7 +28,7 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
           <div className="relative">
-            <img src="https://picsum.photos/seed/about1/600/400" alt="Team collaboration" className="rounded-lg shadow-lg relative z-10"/>
+            <img src="https://picsum.photos/seed/about1/600/400" alt="Team collaboration" className="rounded-lg shadow-lg relative z-10" loading="lazy"/>
             <div className="absolute -bottom-4 -right-4 w-full h-full bg-secondary/20 rounded-lg z-0"></div>
           </div>
         </div>
@@ -72,7 +73,7 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {TEAM_DATA.map((member) => (
               <div key={member.name} className="bg-white p-6 rounded-lg shadow-md">
-                <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" loading="lazy" />
                 <h3 className="text-lg font-bold text-neutral-900">{member.name}</h3>
                 <p className="text-secondary">{member.title}</p>
               </div>

@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICES_DATA } from '../constants';
 import ServiceCard from '../components/ServiceCard';
@@ -7,10 +8,20 @@ import { ArrowRight } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   useTitle('Home');
+  const [heroBg, setHeroBg] = useState('');
+
+  useEffect(() => {
+    // Lazy load the background image to improve initial page performance
+    setHeroBg('linear-gradient(rgba(0, 82, 155, 0.8), rgba(0, 82, 155, 0.8)), url(https://picsum.photos/seed/techbg/1920/1080)');
+  }, []);
+  
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-white bg-cover bg-center" style={{ backgroundImage: 'linear-gradient(rgba(0, 82, 155, 0.8), rgba(0, 82, 155, 0.8)), url(https://picsum.photos/seed/techbg/1920/1080)' }}>
+      <section 
+        className="bg-primary text-white bg-cover bg-center transition-all duration-1000" 
+        style={{ backgroundImage: heroBg }}
+      >
         <div className="container mx-auto px-4 sm:px-6 py-20 sm:py-24 md:py-32 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">Empowering Businesses with Smart IT Solutions</h1>
           <p className="text-base sm:text-lg max-w-3xl mx-auto mb-8 text-neutral-100">
@@ -37,7 +48,7 @@ const HomePage: React.FC = () => {
                 </Link>
              </div>
              <div>
-                <img src="https://picsum.photos/seed/office/800/600" alt="Modern Office" className="rounded-lg shadow-xl"/>
+                <img src="https://picsum.photos/seed/office/800/600" alt="Modern Office" className="rounded-lg shadow-xl" loading="lazy"/>
              </div>
            </div>
         </div>
