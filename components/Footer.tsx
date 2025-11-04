@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NAV_LINKS } from '../constants';
+import { NAV_LINKS, SOCIAL_LINKS } from '../constants';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -10,9 +10,16 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <h3 className="text-lg font-bold mb-4 font-heading">QuantumOne Solutions</h3>
-            <p className="text-neutral-300">
+            <p className="text-neutral-300 mb-6">
               Your trusted IT infrastructure and software partner for end-to-end enterprise technology solutions.
             </p>
+            <div className="flex space-x-4">
+                {SOCIAL_LINKS.map((social) => (
+                    <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="text-neutral-300 hover:text-secondary transition-colors">
+                        <social.icon size={24} />
+                    </a>
+                ))}
+            </div>
           </div>
           <div>
             <h4 className="text-base font-semibold mb-4 font-heading">Quick Links</h4>

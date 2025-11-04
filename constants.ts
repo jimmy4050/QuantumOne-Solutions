@@ -1,4 +1,4 @@
-import { Server, Cloud, Code, Stethoscope, FlaskConical, Network, Cable, Building, School, Factory, Store, User, Users, HeartHandshake } from 'lucide-react';
+import { Server, Cloud, Code, Stethoscope, FlaskConical, Network, Cable, Building, School, Factory, Store, User, Users, HeartHandshake, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { Service, Industry, Project, TeamMember } from './types';
 
 export const NAV_LINKS = [
@@ -8,6 +8,12 @@ export const NAV_LINKS = [
   { name: 'Industries', path: '/industries' },
   { name: 'Portfolio', path: '/portfolio' },
   { name: 'Contact Us', path: '/contact' },
+];
+
+export const SOCIAL_LINKS = [
+    { name: 'LinkedIn', icon: Linkedin, url: '#' },
+    { name: 'Twitter', icon: Twitter, url: '#' },
+    { name: 'Facebook', icon: Facebook, url: '#' },
 ];
 
 export const SERVICE_CATEGORIES = ['All', 'Infrastructure', 'Software', 'Cloud'];
