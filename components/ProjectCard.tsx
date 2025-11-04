@@ -12,7 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div className="p-6">
         <p className="text-sm text-secondary font-semibold mb-1 font-heading">{project.category}</p>
         <h3 className="text-lg font-bold text-neutral-900 mb-2 font-heading">{project.title}</h3>
-        <p className="text-neutral-500">{project.description}</p>
+        <p className="text-neutral-500 text-justify">{project.description}</p>
       </div>
     </div>
   );

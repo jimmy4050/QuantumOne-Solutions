@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
            <div className="grid md:grid-cols-2 gap-12 items-center">
              <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4 font-heading">Welcome to QuantumOne Solutions</h2>
-                <p className="text-base text-neutral-500 mb-4">
+                <p className="text-base text-neutral-500 mb-4 text-justify">
                   Headquartered in Surat, Gujarat, we are a leading provider of end-to-end enterprise technology solutions. Our expert team specializes in IT infrastructure, custom software, and cloud computing, focusing on reliability, scalability, and ultimate customer satisfaction.
                 </p>
                 <Link to="/about" className="text-primary font-semibold inline-flex items-center group font-heading">

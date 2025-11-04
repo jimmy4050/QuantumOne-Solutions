@@ -16,7 +16,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, isDetailed = false }
         <Icon className="w-8 h-8 text-primary" />
       </div>
       <h3 className="text-lg font-bold text-neutral-900 mb-2 font-heading">{service.title}</h3>
-      <p className="text-neutral-500 flex-grow">{isDetailed ? service.details : service.description}</p>
+      <p className={`text-neutral-500 flex-grow ${isDetailed ? 'text-justify' : ''}`}>{isDetailed ? service.details : service.description}</p>
       {!isDetailed && (
         <Link to="/services" className="text-primary font-semibold mt-4 inline-flex items-center group font-heading">
           Learn More

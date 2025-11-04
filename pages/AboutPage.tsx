@@ -19,10 +19,10 @@ const AboutPage: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-4 font-heading">Our Journey</h2>
-            <p className="text-neutral-500 mb-4">
+            <p className="text-neutral-500 mb-4 text-justify">
               Founded in Surat, Gujarat, QuantumOne Solutions was born from a vision to provide businesses with technology solutions that are not just powerful, but also practical and reliable. With years of collective experience, our team is committed to innovation and excellence, helping our clients navigate the complexities of the digital world and achieve sustainable growth.
             </p>
-            <p className="text-neutral-500">
+            <p className="text-neutral-500 text-justify">
               We believe in building long-term partnerships, understanding our clients' unique challenges, and delivering tailored solutions that drive real business value.
             </p>
           </div>
@@ -38,11 +38,11 @@ const AboutPage: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 text-center md:text-left">
           <div>
             <h3 className="text-lg sm:text-xl font-bold text-primary mb-3 font-heading">Our Vision</h3>
-            <p className="text-neutral-500">To be the most trusted and innovative IT solutions partner for businesses in Gujarat and beyond, empowering them to thrive in the digital era.</p>
+            <p className="text-neutral-500 text-justify">To be the most trusted and innovative IT solutions partner for businesses in Gujarat and beyond, empowering them to thrive in the digital era.</p>
           </div>
           <div>
             <h3 className="text-lg sm:text-xl font-bold text-primary mb-3 font-heading">Our Mission</h3>
-            <p className="text-neutral-500">To deliver reliable, scalable, and cost-effective IT infrastructure, software, and cloud solutions, backed by exceptional customer service and technical expertise.</p>
+            <p className="text-neutral-500 text-justify">To deliver reliable, scalable, and cost-effective IT infrastructure, software, and cloud solutions, backed by exceptional customer service and technical expertise.</p>
           </div>
         </div>
       </section>
