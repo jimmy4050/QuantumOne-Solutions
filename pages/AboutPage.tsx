@@ -69,7 +69,7 @@ const AboutPage: React.FC = () => {
       <section className="py-16 md:py-20 bg-neutral-100">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-12 font-heading">Meet Our Leadership</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {TEAM_DATA.map((member) => (
               <div key={member.name} className="bg-white p-6 rounded-lg shadow-md">
                 <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" loading="lazy" />

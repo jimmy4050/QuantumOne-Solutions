@@ -129,19 +129,14 @@ export const PROJECTS_DATA: Project[] = [
 
 export const TEAM_DATA: TeamMember[] = [
     {
-        image: 'https://picsum.photos/seed/team1/400/400',
-        name: 'Prakash Patel',
+        image: 'https://picsum.photos/seed/team_jimmy/400/400',
+        name: 'Jimmy',
         title: 'Founder & CEO'
     },
     {
-        image: 'https://picsum.photos/seed/team2/400/400',
-        name: 'Riya Sharma',
-        title: 'Head of Software Development'
-    },
-    {
-        image: 'https://picsum.photos/seed/team3/400/400',
-        name: 'Amit Desai',
-        title: 'Lead Infrastructure Engineer'
+        image: 'https://picsum.photos/seed/team_ravi/400/400',
+        name: 'Ravi',
+        title: 'Founder & Head of Software Development'
     }
 ];
 
