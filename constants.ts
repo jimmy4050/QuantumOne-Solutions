@@ -1,4 +1,4 @@
-import { Server, Cloud, Code, Stethoscope, FlaskConical, Network, Cable, Building, School, Factory, Store, User, Users, HeartHandshake, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Server, Cloud, Code, Stethoscope, FlaskConical, Network, Cable, Building, School, Factory, Store, User, Users, HeartHandshake, Linkedin, Twitter, Facebook, Award, PackageCheck } from 'lucide-react';
 import { Service, Industry, Project, TeamMember } from './types';
 
 export const NAV_LINKS = [
@@ -155,5 +155,26 @@ export const COMPANY_VALUES = [
         icon: Code,
         title: 'Innovation',
         description: 'We stay at the forefront of technology to provide innovative solutions that solve real-world business challenges and drive growth.'
+    }
+];
+
+export const STATS_DATA = [
+    {
+        icon: Award,
+        value: 10,
+        label: 'Years of Experience',
+        suffix: '+'
+    },
+    {
+        icon: PackageCheck,
+        value: 150,
+        label: 'Projects Completed',
+        suffix: '+'
+    },
+    {
+        icon: HeartHandshake,
+        value: 99,
+        label: 'Satisfied Clients',
+        suffix: '%'
     }
 ];

@@ -12,7 +12,8 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.5",
-    "lucide-react": "^0.552.0"
+    "lucide-react": "^0.552.0",
+    "react-countup": "^6.5.3"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

@@ -5,6 +5,7 @@ import ServiceCard from '../components/ServiceCard';
 import useTitle from '../hooks/useTitle';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import AnimatedText from '../components/AnimatedText';
+import StatsSection from '../components/StatsSection';
 
 const HomePage: React.FC = () => {
   useTitle(
@@ -65,6 +66,9 @@ const HomePage: React.FC = () => {
            </div>
         </div>
       </section>
+
+      {/* Stats Section */}
+      <StatsSection />
 
       {/* Services Section */}
       <section className="py-16 md:py-20 bg-neutral-100">
