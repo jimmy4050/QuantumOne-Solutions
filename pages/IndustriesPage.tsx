@@ -3,13 +3,17 @@ import useTitle from '../hooks/useTitle';
 import { INDUSTRIES_DATA } from '../constants';
 
 const IndustriesPage: React.FC = () => {
-  useTitle('Industries We Serve');
+  useTitle(
+    'Industries We Serve',
+    'We provide tailored IT solutions for various industries including Healthcare, Education, Corporate, Manufacturing, and Retail. Discover our industry-specific expertise.',
+    ['healthcare IT', 'education technology', 'corporate IT solutions', 'manufacturing IT', 'retail technology', 'industry solutions']
+  );
   return (
     <div>
       {/* Page Header */}
       <section className="bg-primary text-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-2xl sm:text-3xl font-bold font-heading">Industries We Serve</h1>
+          <h1 className="text-[clamp(2rem,3vw,2.5rem)] font-bold font-heading">Industries We Serve</h1>
           <p className="text-base mt-2 max-w-3xl mx-auto">
             We provide tailored IT solutions for a diverse range of sectors, understanding the unique challenges of each industry.
           </p>

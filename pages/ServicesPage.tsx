@@ -5,7 +5,11 @@ import ServiceCard from '../components/ServiceCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const ServicesPage: React.FC = () => {
-  useTitle('Our Services');
+  useTitle(
+    'Our Services',
+    'Explore our comprehensive IT services, including server hardware, cloud computing, custom software development (HIMS, LIMS), networking, and security solutions.',
+    ['IT services', 'server hardware', 'cloud computing', 'software development', 'HIMS', 'LIMS', 'networking solutions', 'IT security']
+  );
   const [activeCategory, setActiveCategory] = useState('All');
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,7 +29,7 @@ const ServicesPage: React.FC = () => {
       {/* Page Header */}
       <section className="bg-primary text-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-2xl sm:text-3xl font-bold font-heading">Our Comprehensive IT Services</h1>
+          <h1 className="text-[clamp(2rem,3vw,2.5rem)] font-bold font-heading">Our Comprehensive IT Services</h1>
           <p className="text-base mt-2 max-w-3xl mx-auto">
             From hardware to the cloud, we provide end-to-end solutions to power your business operations.
           </p>

@@ -5,7 +5,11 @@ import ProjectCard from '../components/ProjectCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const PortfolioPage: React.FC = () => {
-  useTitle('Our Portfolio');
+  useTitle(
+    'Our Portfolio',
+    "View our portfolio of successful projects. See how we've implemented HIMS, LIMS, networking infrastructure, and cloud solutions for clients in various industries.",
+    ['IT projects', 'case studies', 'HIMS implementation', 'LIMS automation', 'networking projects', 'cloud solutions portfolio']
+  );
   const [activeCategory, setActiveCategory] = useState('All');
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,7 +29,7 @@ const PortfolioPage: React.FC = () => {
       {/* Page Header */}
       <section className="bg-primary text-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-2xl sm:text-3xl font-bold font-heading">Our Projects</h1>
+          <h1 className="text-[clamp(2rem,3vw,2.5rem)] font-bold font-heading">Our Projects</h1>
           <p className="text-base mt-2 max-w-3xl mx-auto">
             Discover some of our successful implementations and see how we've helped businesses like yours.
           </p>
