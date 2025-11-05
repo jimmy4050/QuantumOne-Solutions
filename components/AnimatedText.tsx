@@ -22,7 +22,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ phrases, className = '' }) 
         <span
           key={i}
           aria-hidden={i !== index}
-          className={`absolute w-full left-0 right-0 transition-all duration-500 ease-in-out text-xl sm:text-2xl font-semibold text-accent ${
+          className={`absolute w-full left-0 right-0 transition-all duration-500 ease-in-out text-xl sm:text-2xl font-semibold text-accent font-heading ${
             i === index ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
           }`}
           style={{ willChange: 'transform, opacity' }}

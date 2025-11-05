@@ -23,8 +23,8 @@ const HomePage: React.FC = () => {
         style={{ backgroundImage: heroBg }}
       >
         <div className="container mx-auto px-4 sm:px-6 py-20 sm:py-24 md:py-32 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4 font-heading">Empowering Businesses with Smart IT Solutions</h1>
-          <AnimatedText className="mb-4" phrases={['Robust Hardware Solutions', 'Custom Software Development', 'Cloud & Data Security']} />
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2 font-heading">Empowering Businesses with Smart IT Solutions</h1>
+          <AnimatedText className="my-6" phrases={['Robust Hardware Solutions', 'Custom Software Development', 'Cloud & Data Security']} />
           <p className="text-base sm:text-lg max-w-3xl mx-auto mb-8 text-neutral-100">
             Your trusted partner for reliable and scalable IT infrastructure, software, and cloud services.
           </p>
