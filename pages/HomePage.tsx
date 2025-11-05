@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { SERVICES_DATA } from '../constants';
 import ServiceCard from '../components/ServiceCard';
 import useTitle from '../hooks/useTitle';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
+import AnimatedText from '../components/AnimatedText';
 
 const HomePage: React.FC = () => {
   useTitle('Home');
@@ -18,11 +19,12 @@ const HomePage: React.FC = () => {
     <div>
       {/* Hero Section */}
       <section 
-        className="bg-primary text-white bg-cover bg-center transition-all duration-1000" 
+        className="relative bg-primary text-white bg-cover bg-center transition-all duration-1000" 
         style={{ backgroundImage: heroBg }}
       >
         <div className="container mx-auto px-4 sm:px-6 py-20 sm:py-24 md:py-32 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4 font-heading">Empowering Businesses with Smart IT Solutions</h1>
+          <AnimatedText className="mb-4" phrases={['Robust Hardware Solutions', 'Custom Software Development', 'Cloud & Data Security']} />
           <p className="text-base sm:text-lg max-w-3xl mx-auto mb-8 text-neutral-100">
             Your trusted partner for reliable and scalable IT infrastructure, software, and cloud services.
           </p>
@@ -30,10 +32,17 @@ const HomePage: React.FC = () => {
             Get in Touch <ArrowRight className="ml-2"/>
           </Link>
         </div>
+        <a 
+          href="#about-section" 
+          aria-label="Scroll to next section" 
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        >
+          <ChevronDown className="w-10 h-10 text-white animate-bounce" />
+        </a>
       </section>
 
       {/* About Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section id="about-section" className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
            <div className="grid md:grid-cols-2 gap-12 items-center">
              <div>
