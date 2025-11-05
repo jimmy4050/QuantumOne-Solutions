@@ -15,9 +15,14 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
                 {SOCIAL_LINKS.map((social) => (
-                    <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="text-neutral-300 hover:text-secondary transition-colors">
-                        <social.icon size={24} />
-                    </a>
+                    <div key={social.name} className="relative group">
+                      <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="text-neutral-300 hover:text-secondary transition-colors">
+                          <social.icon size={24} />
+                      </a>
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-neutral-700 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+                          {social.name}
+                      </div>
+                    </div>
                 ))}
             </div>
           </div>

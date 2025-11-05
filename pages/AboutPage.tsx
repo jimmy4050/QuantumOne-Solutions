@@ -58,8 +58,8 @@ const AboutPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {COMPANY_VALUES.map((value) => (
               <div key={value.title} className="p-6">
-                <div className="flex items-center justify-center bg-primary/10 rounded-full w-20 h-20 mb-6 mx-auto">
-                    <value.icon className="w-10 h-10 text-primary"/>
+                <div className="flex items-center justify-center bg-primary/10 dark:bg-primary/20 rounded-full w-20 h-20 mb-6 mx-auto">
+                    <value.icon className="w-10 h-10 text-primary dark:text-secondary"/>
                 </div>
                 <h3 className="text-lg font-bold text-neutral-900 mb-2 font-heading dark:text-neutral-100">{value.title}</h3>
                 <p className="text-neutral-500 dark:text-neutral-400">{value.description}</p>
