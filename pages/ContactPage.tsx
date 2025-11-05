@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
       {/* Contact Section */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="bg-white shadow-2xl rounded-lg overflow-hidden grid md:grid-cols-12">
+          <div className="bg-white shadow-2xl rounded-lg overflow-hidden grid md:grid-cols-12 dark:bg-neutral-800 dark:shadow-none">
             {/* Contact Info */}
             <div className="md:col-span-5 bg-primary text-white p-8 md:p-12">
               <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold mb-8 font-heading">Contact Information</h2>
@@ -61,14 +61,15 @@ const ContactPage: React.FC = () => {
                   <Phone className="w-7 h-7 text-secondary mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-semibold font-heading">Phone / WhatsApp</h3>
-                    <a href="tel:+919558900157" className="text-neutral-200 hover:text-white">+91 95589 00157</a>
+                    <a href="tel:+919558900157" className="text-neutral-200 hover:text-white block">+91 95589 00157</a>
+                    <a href="tel:+918866317299" className="text-neutral-200 hover:text-white block">+91 88663 17299</a>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Mail className="w-7 h-7 text-secondary mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-semibold font-heading">Email</h3>
-                    <a href="mailto:info@quantumone.com" className="text-neutral-200 hover:text-white">info@quantumone.com</a>
+                    <a href="mailto:quantumonesolutions@outlook.com" className="text-neutral-200 hover:text-white">quantumonesolutions@outlook.com</a>
                   </div>
                 </div>
                  <div>
@@ -86,28 +87,28 @@ const ContactPage: React.FC = () => {
 
             {/* Contact Form */}
             <div className="md:col-span-7 p-8 md:p-12">
-              <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-6 font-heading">Send us a Message</h2>
+              <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-6 font-heading dark:text-neutral-100">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-neutral-700">Full Name</label>
-                  <input type="text" name="name" id="name" required value={formData.name} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-neutral-100 border border-neutral-300 rounded-md shadow-sm focus:outline-none focus:ring-secondary focus:border-secondary" />
+                  <label htmlFor="name" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Full Name</label>
+                  <input type="text" name="name" id="name" required value={formData.name} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-neutral-100 border border-neutral-300 rounded-md shadow-sm focus:outline-none focus:ring-secondary focus:border-secondary dark:bg-neutral-700 dark:border-neutral-600 dark:text-white dark:placeholder-neutral-400" />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-neutral-700">Email Address</label>
-                  <input type="email" name="email" id="email" required value={formData.email} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-neutral-100 border border-neutral-300 rounded-md shadow-sm focus:outline-none focus:ring-secondary focus:border-secondary" />
+                  <label htmlFor="email" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Email Address</label>
+                  <input type="email" name="email" id="email" required value={formData.email} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-neutral-100 border border-neutral-300 rounded-md shadow-sm focus:outline-none focus:ring-secondary focus:border-secondary dark:bg-neutral-700 dark:border-neutral-600 dark:text-white dark:placeholder-neutral-400" />
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-neutral-700">Subject</label>
-                  <input type="text" name="subject" id="subject" required value={formData.subject} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-neutral-100 border border-neutral-300 rounded-md shadow-sm focus:outline-none focus:ring-secondary focus:border-secondary" />
+                  <label htmlFor="subject" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Subject</label>
+                  <input type="text" name="subject" id="subject" required value={formData.subject} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-neutral-100 border border-neutral-300 rounded-md shadow-sm focus:outline-none focus:ring-secondary focus:border-secondary dark:bg-neutral-700 dark:border-neutral-600 dark:text-white dark:placeholder-neutral-400" />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-700">Message</label>
-                  <textarea name="message" id="message" rows={5} required value={formData.message} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-neutral-100 border border-neutral-300 rounded-md shadow-sm focus:outline-none focus:ring-secondary focus:border-secondary"></textarea>
+                  <label htmlFor="message" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300">Message</label>
+                  <textarea name="message" id="message" rows={5} required value={formData.message} onChange={handleChange} className="mt-1 block w-full px-4 py-3 bg-neutral-100 border border-neutral-300 rounded-md shadow-sm focus:outline-none focus:ring-secondary focus:border-secondary dark:bg-neutral-700 dark:border-neutral-600 dark:text-white dark:placeholder-neutral-400"></textarea>
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="h-10">
                     {status === 'sending' && (
-                      <div className="flex items-center text-neutral-600">
+                      <div className="flex items-center text-neutral-600 dark:text-neutral-400">
                         <Loader2 className="animate-spin mr-2" />
                         <span>Sending...</span>
                       </div>
@@ -130,9 +131,9 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 md:py-20 bg-neutral-100">
+      <section className="py-16 md:py-20 bg-neutral-100 dark:bg-neutral-900">
         <div className="container mx-auto px-4 sm:px-6">
-            <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-8 text-center font-heading">Find Us On The Map</h2>
+            <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-8 text-center font-heading dark:text-neutral-100">Find Us On The Map</h2>
             <div className="w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-xl">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238132.3924771578!2d72.6840702717088!3d21.1591204488339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%2Gaurat!5e0!3m2!1sen!2sin!4v1678886568163!5m2!1sen!2sin"

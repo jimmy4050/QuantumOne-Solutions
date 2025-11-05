@@ -25,7 +25,7 @@ const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
       </svg>
       <span className="text-lg sm:text-xl font-bold font-heading">
         <span className="text-primary">QuantumOne</span>
-        <span className="text-neutral-500 font-light"> Solutions</span>
+        <span className="text-neutral-500 font-light dark:text-neutral-400"> Solutions</span>
       </span>
     </div>
   );

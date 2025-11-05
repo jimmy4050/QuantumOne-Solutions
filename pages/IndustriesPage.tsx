@@ -27,12 +27,12 @@ const IndustriesPage: React.FC = () => {
             {INDUSTRIES_DATA.map((industry) => {
               const Icon = industry.icon;
               return (
-                <div key={industry.name} className="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                <div key={industry.name} className="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 dark:bg-neutral-800 dark:shadow-none dark:border dark:border-neutral-700">
                   <div className="flex items-center justify-center bg-secondary/10 rounded-full w-20 h-20 mb-6 mx-auto">
                     <Icon className="w-10 h-10 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold text-neutral-900 mb-3 font-heading">{industry.name}</h3>
-                  <p className="text-neutral-500">{industry.description}</p>
+                  <h3 className="text-xl font-bold text-neutral-900 mb-3 font-heading dark:text-neutral-100">{industry.name}</h3>
+                  <p className="text-neutral-500 dark:text-neutral-400">{industry.description}</p>
                 </div>
               );
             })}

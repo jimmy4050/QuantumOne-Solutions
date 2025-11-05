@@ -53,7 +53,7 @@ const PortfolioPage: React.FC = () => {
                     className={`px-5 py-2 rounded-full font-semibold text-sm md:text-base transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 font-heading ${
                       activeCategory === category
                         ? 'bg-primary text-white shadow-md'
-                        : 'bg-white text-neutral-700 hover:bg-secondary/10 border border-neutral-300'
+                        : 'bg-white text-neutral-700 hover:bg-secondary/10 border border-neutral-300 dark:bg-neutral-700 dark:text-neutral-200 dark:border-neutral-600 dark:hover:bg-neutral-600'
                     }`}
                   >
                     {category}
@@ -69,7 +69,7 @@ const PortfolioPage: React.FC = () => {
                 </div>
               ) : (
                 <div className="text-center py-12">
-                  <p className="text-base text-neutral-500">No projects found for this category.</p>
+                  <p className="text-base text-neutral-500 dark:text-neutral-400">No projects found for this category.</p>
                 </div>
               )}
             </>

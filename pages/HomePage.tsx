@@ -47,12 +47,12 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* About Section */}
-      <section id="about-section" className="py-16 md:py-20 bg-white">
+      <section id="about-section" className="py-16 md:py-20 bg-white dark:bg-neutral-800">
         <div className="container mx-auto px-4 sm:px-6">
            <div className="grid md:grid-cols-2 gap-12 items-center">
              <div>
-                <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-4 font-heading">Welcome to QuantumOne Solutions</h2>
-                <p className="text-base text-neutral-500 mb-4 text-justify">
+                <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-4 font-heading dark:text-neutral-100">Welcome to QuantumOne Solutions</h2>
+                <p className="text-base text-neutral-500 mb-4 text-justify dark:text-neutral-400">
                   Headquartered in Surat, Gujarat, we are a leading provider of end-to-end enterprise technology solutions. Our expert team specializes in IT infrastructure, custom software, and cloud computing, focusing on reliability, scalability, and ultimate customer satisfaction.
                 </p>
                 <Link to="/about" className="text-primary font-semibold inline-flex items-center group font-heading">
@@ -71,10 +71,10 @@ const HomePage: React.FC = () => {
       <StatsSection />
 
       {/* Services Section */}
-      <section className="py-16 md:py-20 bg-neutral-100">
+      <section className="py-16 md:py-20 bg-neutral-100 dark:bg-neutral-900">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-4 font-heading">Our Key Services</h2>
-          <p className="max-w-2xl mx-auto text-neutral-500 mb-12">
+          <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-4 font-heading dark:text-neutral-100">Our Key Services</h2>
+          <p className="max-w-2xl mx-auto text-neutral-500 mb-12 dark:text-neutral-400">
             We offer a comprehensive range of IT services designed to meet the diverse needs of modern businesses.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">

@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
 import Logo from './Logo';
+import ThemeToggle from './ThemeToggle';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,30 +12,35 @@ const Header: React.FC = () => {
   const inactiveLinkClass = 'hover:text-secondary transition-colors duration-300';
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white shadow-md sticky top-0 z-50 dark:bg-neutral-800 dark:border-b dark:border-neutral-700">
       <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         <Link to="/" aria-label="QuantumOne Solutions Home Page">
           <Logo />
         </Link>
-        <nav className="hidden md:flex space-x-8">
-          {NAV_LINKS.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.path}
-              className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} font-heading font-medium`}
-            >
-              {link.name}
-            </NavLink>
-          ))}
-        </nav>
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-primary focus:outline-none" aria-label="Toggle mobile menu">
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+        <div className="flex items-center">
+          <nav className="hidden md:flex space-x-8">
+            {NAV_LINKS.map((link) => (
+              <NavLink
+                key={link.name}
+                to={link.path}
+                className={({ isActive }) => `${isActive ? activeLinkClass : inactiveLinkClass} font-heading font-medium`}
+              >
+                {link.name}
+              </NavLink>
+            ))}
+          </nav>
+          <div className="hidden md:block ml-6">
+            <ThemeToggle />
+          </div>
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-primary focus:outline-none ml-4" aria-label="Toggle mobile menu">
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-white pb-4">
+        <div className="md:hidden bg-white dark:bg-neutral-800 pb-4">
           <nav className="flex flex-col items-center space-y-4">
             {NAV_LINKS.map((link) => (
               <NavLink
@@ -47,6 +53,9 @@ const Header: React.FC = () => {
               </NavLink>
             ))}
           </nav>
+           <div className="mt-4 flex justify-center">
+            <ThemeToggle />
+          </div>
         </div>
       )}
     </header>

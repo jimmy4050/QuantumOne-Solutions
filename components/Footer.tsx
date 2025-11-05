@@ -49,13 +49,16 @@ const Footer: React.FC = () => {
                 <MapPin size={20} className="mr-3 mt-1 flex-shrink-0" />
                 <span>Surat, Gujarat, India</span>
               </li>
-              <li className="flex items-center">
-                <Phone size={20} className="mr-3 flex-shrink-0" />
-                <a href="tel:+919558900157" className="hover:text-secondary transition-colors">+91 95589 00157</a>
+              <li className="flex items-start">
+                <Phone size={20} className="mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <a href="tel:+919558900157" className="hover:text-secondary transition-colors block">+91 95589 00157</a>
+                  <a href="tel:+918866317299" className="hover:text-secondary transition-colors block">+91 88663 17299</a>
+                </div>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-3 flex-shrink-0" />
-                <a href="mailto:info@quantumone.com" className="hover:text-secondary transition-colors">info@quantumone.com</a>
+                <a href="mailto:quantumonesolutions@outlook.com" className="hover:text-secondary transition-colors">quantumonesolutions@outlook.com</a>
               </li>
             </ul>
           </div>
