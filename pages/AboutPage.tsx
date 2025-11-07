@@ -1,6 +1,7 @@
 import React from 'react';
 import useTitle from '../hooks/useTitle';
 import { COMPANY_VALUES, TEAM_DATA } from '../constants';
+import TeamMemberCard from '../components/TeamMemberCard';
 
 const AboutPage: React.FC = () => {
   useTitle(
@@ -73,13 +74,9 @@ const AboutPage: React.FC = () => {
       <section className="py-16 md:py-20 bg-neutral-100 dark:bg-neutral-800">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-12 font-heading dark:text-neutral-100">Meet Our Leadership</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            {TEAM_DATA.map((member) => (
-              <div key={member.name} className="bg-white p-6 rounded-lg shadow-md dark:bg-neutral-700">
-                <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" loading="lazy" />
-                <h3 className="text-lg font-bold text-neutral-900 font-heading dark:text-neutral-100">{member.name}</h3>
-                <p className="text-secondary">{member.title}</p>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {TEAM_DATA.map((member, index) => (
+              <TeamMemberCard key={member.name} member={member} delay={index * 200} />
             ))}
           </div>
         </div>

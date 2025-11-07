@@ -147,6 +147,11 @@ export const TEAM_DATA: TeamMember[] = [
         image: 'https://picsum.photos/seed/team_ravi/400/400',
         name: 'Ravi',
         title: 'Founder & Head of Software Development'
+    },
+    {
+        image: 'https://picsum.photos/seed/team_krunal/400/400',
+        name: 'Krunal',
+        title: 'Head of Marketing & Sales'
     }
 ];
 
