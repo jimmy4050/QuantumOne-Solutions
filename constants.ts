@@ -16,6 +16,16 @@ export const SOCIAL_LINKS = [
     { name: 'Facebook', icon: Facebook, url: '#' },
 ];
 
+export const CONTACT_DETAILS = {
+  address: 'Surat, Gujarat, India',
+  phones: [
+    { display: '+91 95589 00157', tel: 'tel:+919558900157' },
+    { display: '+91 88663 17299', tel: 'tel:+918866317299' },
+    { display: '+91 63550 48577', tel: 'tel:+916355048577' },
+  ],
+  email: { display: 'quantumonesolutions@outlook.com', href: 'mailto:quantumonesolutions@outlook.com' }
+};
+
 export const SERVICE_CATEGORIES = ['All', 'Infrastructure', 'Software', 'Cloud'];
 
 export const SERVICES_DATA: Service[] = [

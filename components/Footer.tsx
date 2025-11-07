@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NAV_LINKS, SOCIAL_LINKS } from '../constants';
+import { NAV_LINKS, SOCIAL_LINKS, CONTACT_DETAILS } from '../constants';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -52,18 +52,19 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-neutral-300">
               <li className="flex items-start">
                 <MapPin size={20} className="mr-3 mt-1 flex-shrink-0" />
-                <span>Surat, Gujarat, India</span>
+                <span>{CONTACT_DETAILS.address}</span>
               </li>
               <li className="flex items-start">
                 <Phone size={20} className="mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <a href="tel:+919558900157" className="hover:text-secondary transition-colors block">+91 95589 00157</a>
-                  <a href="tel:+918866317299" className="hover:text-secondary transition-colors block">+91 88663 17299</a>
+                  {CONTACT_DETAILS.phones.map(phone => (
+                    <a key={phone.tel} href={phone.tel} className="hover:text-secondary transition-colors block">{phone.display}</a>
+                  ))}
                 </div>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-3 flex-shrink-0" />
-                <a href="mailto:quantumonesolutions@outlook.com" className="hover:text-secondary transition-colors">quantumonesolutions@outlook.com</a>
+                <a href={CONTACT_DETAILS.email.href} className="hover:text-secondary transition-colors">{CONTACT_DETAILS.email.display}</a>
               </li>
             </ul>
           </div>

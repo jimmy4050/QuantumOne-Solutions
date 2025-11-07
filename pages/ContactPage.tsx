@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useTitle from '../hooks/useTitle';
-import { SOCIAL_LINKS } from '../constants';
+import { SOCIAL_LINKS, CONTACT_DETAILS } from '../constants';
 import { MapPin, Phone, Mail, Loader2, CheckCircle2 } from 'lucide-react';
 
 type Status = 'idle' | 'sending' | 'success';
@@ -54,22 +54,23 @@ const ContactPage: React.FC = () => {
                   <MapPin className="w-7 h-7 text-secondary mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-semibold font-heading">Address</h3>
-                    <p className="text-neutral-200">Surat, Gujarat, India</p>
+                    <p className="text-neutral-200">{CONTACT_DETAILS.address}</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Phone className="w-7 h-7 text-secondary mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-semibold font-heading">Phone / WhatsApp</h3>
-                    <a href="tel:+919558900157" className="text-neutral-200 hover:text-white block">+91 95589 00157</a>
-                    <a href="tel:+918866317299" className="text-neutral-200 hover:text-white block">+91 88663 17299</a>
+                    {CONTACT_DETAILS.phones.map(phone => (
+                      <a key={phone.tel} href={phone.tel} className="text-neutral-200 hover:text-white block">{phone.display}</a>
+                    ))}
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Mail className="w-7 h-7 text-secondary mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-semibold font-heading">Email</h3>
-                    <a href="mailto:quantumonesolutions@outlook.com" className="text-neutral-200 hover:text-white">quantumonesolutions@outlook.com</a>
+                    <a href={CONTACT_DETAILS.email.href} className="text-neutral-200 hover:text-white">{CONTACT_DETAILS.email.display}</a>
                   </div>
                 </div>
                  <div>
