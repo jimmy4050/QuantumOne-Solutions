@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import useTitle from '../hooks/useTitle';
 import { SOCIAL_LINKS, CONTACT_DETAILS } from '../constants';
-import { MapPin, Phone, Mail, Loader2, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Loader2, CheckCircle2, XCircle } from 'lucide-react';
 
-type Status = 'idle' | 'sending' | 'success';
+type Status = 'idle' | 'sending' | 'success' | 'error';
 
 const ContactPage: React.FC = () => {
   useTitle(
@@ -19,15 +19,59 @@ const ContactPage: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate form submission
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setStatus('idle'), 3000); // Reset status after 3 seconds
-    }, 1500);
+
+    // --- FORM SUBMISSION SETUP (FORMSPREE) ---
+    // This form uses Formspree (https://formspree.io/) to send emails without a backend server.
+    // Follow these simple steps to make it work:
+    //
+    // 1. SIGN UP:
+    //    Go to https://formspree.io/ and create a new free account.
+    //
+    // 2. CREATE A NEW FORM:
+    //    - In your Formspree dashboard, click on "+ New form".
+    //    - Name your form (e.g., "QuantumOne Contact Form").
+    //    - The recipient email should be automatically set to your signup email.
+    //      You can add 'quantumonesolutions@outlook.com' in the settings if needed.
+    //    - Click "Create Form".
+    //
+    // 3. GET YOUR ENDPOINT URL:
+    //    - After creating the form, you will be taken to its "Integration" tab.
+    //    - Copy the unique Endpoint URL provided. It will look like this:
+    //      https://formspree.io/f/xxxxxxxx  (where xxxxxxxx is your unique form ID)
+    //
+    // 4. UPDATE THE CODE BELOW:
+    //    - Replace the placeholder 'https://formspree.io/f/YOUR_UNIQUE_FORM_ID' with the
+    //      actual URL you copied from Formspree.
+    //
+    // That's it! Your contact form will now send emails to your configured address.
+    const formspreeEndpoint = 'https://formspree.io/f/mvgvejoe';
+
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setStatus('idle'), 3000); // Reset status after 3 seconds
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000); // Reset status after 5 seconds
+      }
+    } catch (error) {
+      console.error('An error occurred during form submission:', error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000); // Reset status after 5 seconds
+    }
   };
 
   return (
@@ -120,6 +164,12 @@ const ContactPage: React.FC = () => {
                         <span>Message Sent!</span>
                       </div>
                     )}
+                    {status === 'error' && (
+                      <div className="flex items-center text-red-600">
+                        <XCircle className="mr-2" />
+                        <span>Submission failed. Please try again.</span>
+                      </div>
+                    )}
                   </div>
                   <button type="submit" disabled={status === 'sending'} className="bg-primary text-white py-3 px-8 border border-transparent rounded-md shadow-sm text-base font-medium hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary font-heading disabled:bg-neutral-400 disabled:cursor-not-allowed">
                     Send Message
@@ -137,7 +187,7 @@ const ContactPage: React.FC = () => {
             <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-neutral-900 mb-8 text-center font-heading dark:text-neutral-100">Find Us On The Map</h2>
             <div className="w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238132.3924771578!2d72.6840702717088!3d21.1591204488339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%2Gaurat!5e0!3m2!1sen!2sin!4v1678886568163!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238132.3924771578!2d72.6840702717088!3d21.1591204488339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%Gaurat!5e0!3m2!1sen!2sin!4v1678886568163!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
