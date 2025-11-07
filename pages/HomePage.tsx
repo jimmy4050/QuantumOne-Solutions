@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SERVICES_DATA } from '../constants';
 import ServiceCard from '../components/ServiceCard';
 import useTitle from '../hooks/useTitle';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import AnimatedText from '../components/AnimatedText';
 import StatsSection from '../components/StatsSection';
 
@@ -37,13 +37,6 @@ const HomePage: React.FC = () => {
             Get in Touch <ArrowRight className="ml-2"/>
           </Link>
         </div>
-        <a 
-          href="#about-section" 
-          aria-label="Scroll to next section" 
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-        >
-          <ChevronDown className="w-10 h-10 text-white animate-bounce" />
-        </a>
       </section>
 
       {/* About Section */}
